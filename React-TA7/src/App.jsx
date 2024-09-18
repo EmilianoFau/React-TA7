@@ -26,12 +26,12 @@ function App() {
     <>
       <div>
         <Input value={task} onChange={handleChange} />
-        <Button onClick={handleAddTask} />
+        <Button onClick={handleAddTask} text="Agregar tarea" />
         <ul>
           {taskList.map((item, index) => (
             <li key={index}>
               {item}
-              <button onClick={() => handleDeleteTask(index)}>Eliminar</button>
+              <Button onClick={() => handleDeleteTask(index)} text="Eliminar tarea" />
             </li>
           ))}
         </ul>
